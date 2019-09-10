@@ -1,7 +1,8 @@
 import Mix from "../images/Cactus_mix.jpg";
 import Black from "../images/Cactus_black.jpg";
-import Yellow from "../images/Cactus_Yellow.jpg";
-import Red from "../images/Cactus_Red.jpg";
+import Yellow from "../images/Cactus_yellow.jpg";
+import Red from "../images/Cactus_red.jpg";
+
 export const database = [
   {
     product: "Column Cactus",

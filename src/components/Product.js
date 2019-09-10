@@ -1,9 +1,10 @@
 import React from "react";
+import { database } from "./database";
 
 const Product = () => {
   return (
     <div>
-      <p>HI</p>
+      <p>{database[0].product}</p>
     </div>
   );
 };
