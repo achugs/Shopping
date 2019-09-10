@@ -8,7 +8,7 @@ const Basket = () => {
     setBasket(currentBasket => [...currentBasket, item]);
   };
 
-  if (basket.length === 0) return <p>No Items found</p>;
+  if (basket.length === 0) return <h1>No Items found</h1>;
   return (
     <div>
       <p>Basket</p>
