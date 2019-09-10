@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from "../Basket-Context";
+import styled from "styled-components";
 
 const Basket = () => {
   const [basket, setBasket] = useContext(AppContext);
@@ -7,16 +8,46 @@ const Basket = () => {
     const item = { product: basket[0].product, price: basket[0].price };
     setBasket(currentBasket => [...currentBasket, item]);
   };
-
-  if (basket.length === 0) return <h1>No Items found</h1>;
+  const Title = styled.p`
+    font-size: 2.5em;
+    text-align: center;
+    color: palevioletred;
+  `;
+  const ProductTitle = styled.p`
+    font-size: 1.5em;
+    text-align: center;
+    color: palevioletred;
+  `;
+  const Error = styled.h1`
+    font-size: 2.5em;
+    text-align: center;
+    color: palevioletred;
+  `;
+  const Button = styled.button`
+    font-size: 1em;
+    margin: 1em;
+    padding: 0.25em 1em;
+    border: 2px solid palevioletred;
+    border-radius: 10px;
+    background: papayawhip;
+    color: palevioletred;
+  `;
+  const Text = styled.div`
+    font-size: 1em;
+    text-align: center;
+    color: palevioletred;
+  `;
+  if (basket.length === 0) return <Error>No Items found in Basket</Error>;
   return (
     <div>
-      <p>Basket</p>
-      <p>{basket[0].product}</p>
-      <p>Quantity: {basket.length}</p>
-      <button onClick={addToBasket}>Add more</button>
-      <p>Total:£{basket.length * basket[0].price}</p>
-      <button onClick={() => setBasket([])}>Delete</button>
+      <Title>Basket</Title>
+      <ProductTitle>{basket[0].product}</ProductTitle>
+      <Text>
+        <p>Quantity: {basket.length}</p>
+        <Button onClick={addToBasket}>Add more</Button>
+        <p>Total:£{basket.length * basket[0].price}</p>
+        <Button onClick={() => setBasket([])}>Delete</Button>
+      </Text>
     </div>
   );
 };

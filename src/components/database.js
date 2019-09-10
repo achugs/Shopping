@@ -8,7 +8,7 @@ export const database = [
     product: "Column Cactus",
     price: 10,
     description:
-      "Column Cactus is a name used to describe any cactus with a tall body,so it encompasses a huge variety of cacti.Growing pot size: 10.5cm diameter, 8cm height.Plant size: Height including pot is between 15-20cm depending on specimen.Excludes decorative pot."
+      "Column Cactus is a name used to describe any cactus with a tall body, so it encompasses a huge variety of cacti. Growing pot size: 10.5cm diameter, 8cm height. Plant size: Height including pot is between 15-20cm depending on specimen. Excludes decorative pot."
   }
 ];
 
