@@ -8,6 +8,10 @@ const Basket = () => {
     const item = { product: basket[0].product, price: basket[0].price };
     setBasket(currentBasket => [...currentBasket, item]);
   };
+  const removeFromBasket = () => {
+    // const item = { product: basket[0].product, price: basket[0].price };
+    setBasket(currentBasket => currentBasket.slice(0, -1));
+  };
   const Title = styled.p`
     font-size: 2.5em;
     text-align: center;
@@ -44,9 +48,11 @@ const Basket = () => {
       <ProductTitle>{basket[0].product}</ProductTitle>
       <Text>
         <p>Quantity: {basket.length}</p>
-        <Button onClick={addToBasket}>Add more</Button>
+        <Button onClick={addToBasket}> + </Button>
+        <Button onClick={removeFromBasket}>-</Button>
         <p>Total:£{basket.length * basket[0].price}</p>
         <Button onClick={() => setBasket([])}>Delete</Button>
+        <Button>Buy</Button>
       </Text>
     </div>
   );
